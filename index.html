@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jingle Bells Parking Lot</title>
+  <title>Parking Lot</title>
 
   <!-- Prism.js syntax highlighting -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
@@ -46,38 +46,45 @@
   </nav>
  <button class="print-button" onclick="window.print()" style="position: fixed; bottom: 24px; right: 24px; padding: 10px 16px; background: #2563eb; color: white; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.15); font-size: 0.9rem; z-index: 2000;">  Print This Page </button>
 
-  <h1 id="top">Jingle Bells Parking Lot </h1>
+  <h1 id="top">Parking lot</h1>
 <div id="print-hero">
     <img src="" alt="">
 </div>
 
   <section id="information">
     <h2>Project Information</h2>
-    <p><strong>Course:</strong> TECH 117 (Computer Engineering Technology, Fall 2026)</p>
+    <p><strong>Course:</strong> TECH 117 (Computer Engineering Technology, Fall 2025)</p>
     <p><strong>Instructor:</strong> Ph.D. Ana Rodrigues</p>
     <p><strong>Team Members:</strong></p>
-    <p><strong>Group 4</strong></p>
     <ul>
       <li>Alexander Maro</li>
+      <li>Djimon Dunkley</li>
       <li>Oleksii Kravets</li>
       <li>Mariia Lepeshkina</li>
-      <li>Djimon Dunkley</li>
     </ul>
   </section>
 
   <section id="introduction">
     <h2>Introduction</h2>
-    <p>This project uses an <strong>Arduino Uno</strong>, an <strong>HC-SR04 ultrasonic sensor</strong>, a
-      <strong>passive buzzer</strong>, and <strong>red/yellow/green LEDs</strong> to provide proximity-based
-      alerts, similar to automotive collision detection systems.
+    <p>   
+      Parking in busy areas can be challenging, especially when drivers have to spend extra time searching for available parking spaces. This can lead to traffic congestion, wasted time, and unnecessary fuel consumption. Our project aims to address this problem by developing an Arduino Uno Smart Parking Guidance System that automatically monitors parking spaces and guides drivers toward the closest available spot.
     </p>
+    <p> The system uses an Arduino Uno as its main microcontroller, which processes information collected from presence sensors installed in individual parking spaces. These sensors detect whether a parking space is occupied or empty and send the information to the Arduino. Based on the collected data, the system determines which parking spaces are available and identifies the closest suitable spot for incoming drivers.
+
+    </p>
+    <p>To make the system easy to understand and operate, two different LED colours are used to communicate parking information. Green LEDs indicate available parking spaces, while red LEDs show occupied spaces. This visual guidance helps drivers quickly recognize available parking spots without having to check every space individually.</p>
+    <p>In addition, the project includes a motor-operated mechanism that will represent an automatic entrance barrier. When a vehicle approaches the parking entrance, the motor can control the barrier to allow or restrict access depending on parking availability. A 16×2 LCD display will provide real-time information, such as the total number of available spaces and their locations. If all parking spaces are occupied, the display will show a "PARKING FULL" message to notify incoming drivers.</p>
+    <p>Throughout the development process, we may face several challenges that could affect the completion of the project. These include limited time, budget restrictions, and a lack of experience with Arduino programming and electronic components. Some sensors may not detect vehicles accurately, and connecting multiple components while ensuring that they work together correctly may require additional testing and troubleshooting. There is also a possibility that certain components, such as the automatic entrance barrier, may not operate as expected. To overcome these difficulties, we plan to test individual components separately, simplify the programming when necessary, and consider alternative solutions. For example, if the original gate mechanism proves too difficult to implement, we can use a basic servo motor to create a simpler working barrier. We will also prioritize the main parking detection and guidance functions if time or resources become limited.</p>
+    <p>The main goal of this project is to demonstrate how microcontrollers, sensors, motors, LED indicators, and programming can be combined to create a practical automated parking solution. By building a miniature working model, we hope to show how technology can make parking more organized, convenient, and efficient while reducing the time drivers spend searching for available spaces.</p>
+
   </section>
+
 
   <section id="circuit-diagram">
     <h2>Circuit Diagram</h2>
     <p>The ultrasonic sensor measures distance; the Arduino activates LEDs and the buzzer according to distance
       thresholds.</p>
-    <img src="collision-warning-system-Arduino.jpg" alt="Arduino collision warning system">
+    <img src="prototype2.png" alt="Arduino collision warning system">
   </section>
 
   <section id="environment">
@@ -128,14 +135,14 @@
           <td><a href="https://www.sparkfun.com/passive-buzzer-module.html">SparkFun</a></td>
         </tr>
         <tr>
-          <td>LEDs (Red, Yellow, Green)</td>
-          <td>3</td>
+          <td>LEDs (Red, Green)</td>
+          <td>2</td>
           <td>$0.20</td>
           <td>$0.60</td>
           <td>Adafruit</td>
         </tr>
         <tr>
-          <td>220 Ω Resistors</td>
+          <td>320 Ω Resistors</td>
           <td>3</td>
           <td>$0.03</td>
           <td>$0.09</td>
@@ -284,65 +291,19 @@ void loop() {
 
   <ul>
     <li>
-      Arduino Project Hub. (n.d.). 
-      <em>Ultrasonic sensor projects.</em> 
-      Arduino Project Hub. 
-      <a href="https://projecthub.arduino.cc/projects/tags/ultrasonic-sensor" target="_blank" rel="noopener noreferrer">
-        https://projecthub.arduino.cc/projects/tags/ultrasonic-sensor
+      Parking Lot - SunFounder. (n.d.). 
+      <em>Empty parking lot detector</em> 
+      SunFounder. 
+      <a href="https://docs.sunfounder.com/projects/summary-of-fun-projects/en/latest/arduino/parking_lot.html" target="_blank" rel="noopener noreferrer">
+        https://docs.sunfounder.com/projects/summary-of-fun-projects/en/latest/arduino/parking_lot4.0.html
       </a>
     </li>
-
     <li>
-      Arduino Project Hub. (n.d.). 
-      <em>Buzzer projects.</em> 
-      Arduino Project Hub. 
-      <a href="https://create.arduino.cc/projecthub/projects/tags/buzzer" target="_blank" rel="noopener noreferrer">
-        https://create.arduino.cc/projecthub/projects/tags/buzzer
-      </a>
-    </li>
-
-    <li>
-      Arduino Project Hub. (n.d.). 
-      <em>LED projects.</em> 
-      Arduino Project Hub. 
-      <a href="https://projecthub.arduino.cc/projects/tags/led" target="_blank" rel="noopener noreferrer">
-        https://projecthub.arduino.cc/projects/tags/led
-      </a>
-    </li>
-
-    <li>
-      Instructables. (n.d.). 
-      <em>Distance measurement using ultrasonic sensor.</em> 
-      Instructables. 
-      <a href="https://www.instructables.com/Arduino-Distance-Measurement-Using-Ultrasonic-Senso/" target="_blank" rel="noopener noreferrer">
-        https://www.instructables.com/Arduino-Distance-Measurement-Using-Ultrasonic-Senso/
-      </a>
-    </li>
-
-    <li>
-      Circuit Basics. (n.d.). 
-      <em>How to use an ultrasonic sensor with Arduino.</em> 
-      Circuit Basics. 
-      <a href="https://www.circuitbasics.com/how-to-use-an-ultrasonic-sensor-with-arduino/" target="_blank" rel="noopener noreferrer">
-        https://www.circuitbasics.com/how-to-use-an-ultrasonic-sensor-with-arduino/
-      </a>
-    </li>
-
-    <li>
-      Last Minute Engineers. (n.d.). 
-      <em>Ultrasonic sensor tutorial.</em> 
-      Last Minute Engineers. 
-      <a href="https://lastminuteengineers.com/ultrasonic-sensor-arduino-tutorial/" target="_blank" rel="noopener noreferrer">
-        https://lastminuteengineers.com/ultrasonic-sensor-arduino-tutorial/
-      </a>
-    </li>
-
-    <li>
-      Arduino XMAS Hitcounter. (n.d.). 
-      <em>Jingle Bells tutorial.</em> 
-      Last Minute Engineers. 
-      <a href="https://www.instructables.com/Arduino-XMAS-hitcounter/" target="_blank" rel="noopener noreferrer">
-        https://www.instructables.com/Arduino-XMAS-hitcounter
+      (Arduino-Based Parking Lot System, n.d.) 
+      <em>Arduino Based Parking Lot System</em> 
+      Slideshare. 
+      <a href=" https://www.slideshare.net/slideshow/arduino-based-parking-lot-system/55733874#7" target="_blank" rel="noopener noreferrer">
+         https://www.slideshare.net/slideshow/arduino-based-parking-lot-system/55733874#7
       </a>
     </li>
   </ul>
